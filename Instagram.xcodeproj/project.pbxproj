@@ -17,6 +17,7 @@
 		E96553CA250B8F1100255D55 /* ImageSelectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96553C9250B8F1100255D55 /* ImageSelectViewController.swift */; };
 		E96553CC250B8F2000255D55 /* PostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96553CB250B8F2000255D55 /* PostViewController.swift */; };
 		E96553CE250B8F3700255D55 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96553CD250B8F3700255D55 /* SettingViewController.swift */; };
+		E96553D2250B9A3C00255D55 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96553D1250B9A3C00255D55 /* TabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		E96553C9250B8F1100255D55 /* ImageSelectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSelectViewController.swift; sourceTree = "<group>"; };
 		E96553CB250B8F2000255D55 /* PostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewController.swift; sourceTree = "<group>"; };
 		E96553CD250B8F3700255D55 /* SettingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
+		E96553D1250B9A3C00255D55 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 				E96553C9250B8F1100255D55 /* ImageSelectViewController.swift */,
 				E96553CB250B8F2000255D55 /* PostViewController.swift */,
 				E96553CD250B8F3700255D55 /* SettingViewController.swift */,
+				E96553D1250B9A3C00255D55 /* TabBarController.swift */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -151,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96553CC250B8F2000255D55 /* PostViewController.swift in Sources */,
+				E96553D2250B9A3C00255D55 /* TabBarController.swift in Sources */,
 				E96553C8250B8EDD00255D55 /* LoginViewController.swift in Sources */,
 				E96553B8250B8E2700255D55 /* HomeViewController.swift in Sources */,
 				E96553B4250B8E2700255D55 /* AppDelegate.swift in Sources */,
