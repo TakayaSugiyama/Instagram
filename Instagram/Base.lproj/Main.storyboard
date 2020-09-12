@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="EYO-Lz-qgW">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
@@ -23,7 +23,7 @@
             </objects>
             <point key="canvasLocation" x="139" y="127"/>
         </scene>
-        <!--設定-->
+        <!--カメラ-->
         <scene sceneID="53X-Jj-YLb">
             <objects>
                 <viewController storyboardIdentifier="ImageSelect" id="s5n-n0-hCJ" customClass="ImageSelectViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -33,7 +33,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="V5Y-wl-1Qc"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="設定" image="camera" id="N0X-tF-d6w"/>
+                    <tabBarItem key="tabBarItem" title="カメラ" image="camera" id="N0X-tF-d6w"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vmb-UZ-m7h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -54,7 +54,7 @@
             </objects>
             <point key="canvasLocation" x="943" y="976"/>
         </scene>
-        <!--setting-->
+        <!--設定-->
         <scene sceneID="FzF-tL-i3K">
             <objects>
                 <viewController storyboardIdentifier="Setting" id="6sg-Kr-K0T" customClass="SettingViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,7 +64,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="VrN-Aq-LKY"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="setting" image="setting" id="uu8-6P-YII"/>
+                    <tabBarItem key="tabBarItem" title="設定" image="setting" id="uu8-6P-YII"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mq5-lq-MIz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -91,6 +91,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="EYO-Lz-qgW" customClass="TabBarController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="0o3-Zf-Tf1">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
