@@ -60,5 +60,7 @@
 	</array>
 	<key>UIUserInterfaceStyle</key>
 	<string>Light</string>
+	<key>NSCameraUsageDescription</key>
+	<string>本アプリは、画像の投稿及編集のため、カメラの使用許可を求めます</string>
 </dict>
 </plist>

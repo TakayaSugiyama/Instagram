@@ -30,7 +30,53 @@
                     <view key="view" contentMode="scaleToFill" restorationIdentifier="ImageSelect" id="MLM-MU-X5f" customClass="ImageS">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jkk-Ym-sh5">
+                                <rect key="frame" x="57" y="124" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="0z6-9B-QuA"/>
+                                </constraints>
+                                <state key="normal" title="ライブラリ" backgroundImage="btn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleLibraryButton:" destination="s5n-n0-hCJ" eventType="touchUpInside" id="KQ5-C6-L9y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yg1-eB-HT1">
+                                <rect key="frame" x="57" y="224" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="dYG-WG-9XQ"/>
+                                </constraints>
+                                <state key="normal" title="キャンセル" backgroundImage="btn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCancelButton:" destination="s5n-n0-hCJ" eventType="touchUpInside" id="3Zz-cS-zDj"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0p-lo-58f">
+                                <rect key="frame" x="57" y="174" width="300" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="300" id="gjm-2W-nxL"/>
+                                </constraints>
+                                <state key="normal" title="カメラ" backgroundImage="btn">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="handleCameraButton:" destination="s5n-n0-hCJ" eventType="touchUpInside" id="s0e-EA-P3J"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="L0p-lo-58f" firstAttribute="centerX" secondItem="MLM-MU-X5f" secondAttribute="centerX" id="7EA-Ff-0na"/>
+                            <constraint firstItem="jkk-Ym-sh5" firstAttribute="centerX" secondItem="MLM-MU-X5f" secondAttribute="centerX" id="I1k-Oz-hDZ"/>
+                            <constraint firstItem="jkk-Ym-sh5" firstAttribute="top" secondItem="V5Y-wl-1Qc" secondAttribute="top" constant="80" id="agO-vJ-Vjo"/>
+                            <constraint firstItem="Yg1-eB-HT1" firstAttribute="centerX" secondItem="MLM-MU-X5f" secondAttribute="centerX" id="j1A-C3-OA5"/>
+                            <constraint firstItem="L0p-lo-58f" firstAttribute="top" secondItem="jkk-Ym-sh5" secondAttribute="bottom" constant="10" id="laM-hE-1Bs"/>
+                            <constraint firstItem="Yg1-eB-HT1" firstAttribute="top" secondItem="L0p-lo-58f" secondAttribute="bottom" constant="10" id="wbl-wq-WaS"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="V5Y-wl-1Qc"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="カメラ" image="camera" id="N0X-tF-d6w"/>
