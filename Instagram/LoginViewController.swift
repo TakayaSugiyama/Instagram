@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import SVProgressHUD
 
 class LoginViewController: UIViewController {
 
@@ -17,12 +18,35 @@ class LoginViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
     
     // ログインボタンをタップしたときに呼ばれるメソッド
     @IBAction func handleLoginButton(_ sender: Any) {
+        if let address = mailAddressTextField.text, let password = passwordTextField.text {
+            if address.isEmpty || password.isEmpty {
+                SVProgressHUD.showError(withStatus: "必須項目を入力してください")
+                return
+            }
+            
+            //HUDで処理中を表示
+            SVProgressHUD.show()
+            
+            Auth.auth().signIn(withEmail: address, password: password) { authResult, error in
+                if let error = error {
+                    SVProgressHUD.showError(withStatus: "サインインに失敗しました")
+                    print("DEBUG_PRINT: " + error.localizedDescription)
+                    return
+                }
+                
+                print("DEBUG_PRINT: ログインに成功しました")
+                //HUDを消す
+                SVProgressHUD.dismiss()
+                
+                //画面を閉じてタブ画面に戻る
+                self.dismiss(animated: true, completion: nil)
+            }
+        }
     }
     
     // アカウント作成ボタンをタップしたときに呼ばれるメソッド
@@ -30,6 +54,7 @@ class LoginViewController: UIViewController {
         if let address = mailAddressTextField.text, let password = passwordTextField.text, let displayName = displayNameTextField.text {
             //アドレスとパスワードと表示名のいずれでも入力されていない時は何もしない
             if address.isEmpty || password.isEmpty || displayName.isEmpty {
+                SVProgressHUD.showError(withStatus: "何かが空文字です。")
                 print("DEBUG_PRINT: 何かが空文字です")
                 return
             }
@@ -39,6 +64,7 @@ class LoginViewController: UIViewController {
                 if let error = error {
                     // エラーがあったら原因をprintして、returnすることで以降の処理を実行せずに処理を終了する
                     print("DEBUG_PRINT: " + error.localizedDescription)
+                    SVProgressHUD.showError(withStatus: "ユーザー作成に失敗しました")
                     return
                 }
                 print("DEBUG_PRINT: ユーザー作成に成功しました")
@@ -51,9 +77,12 @@ class LoginViewController: UIViewController {
                     changeRequest.commitChanges(){ error in
                         if  let error = error {
                             //プロフィールの更新でエラーが発生
+                            SVProgressHUD.showError(withStatus: "表示名の設定に失敗しました")
                             print("DEBUG_PRINT: " + error.localizedDescription)
                         }
                         print("DEBUG_PRINT: [displayName = \(user.displayName!)]の設定に成功しました")
+                        //HUDを消す
+                        SVProgressHUD.dismiss()
                         self.dismiss(animated: true, completion: nil)
                     }
                 }
