@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Const {
+public struct Const {
     static let ImagePath = "image"
     static let PostPath = "posts"
 }
