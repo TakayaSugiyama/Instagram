@@ -21,6 +21,9 @@
 		E96553D2250B9A3C00255D55 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E96553D1250B9A3C00255D55 /* TabBarController.swift */; };
 		E9B56638250C8F7200D92E9B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E9B56637250C8F7200D92E9B /* GoogleService-Info.plist */; };
 		E9D96E812512414D00E6CBEC /* Const.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9D96E802512414D00E6CBEC /* Const.swift */; };
+		E9E95805251291390098944E /* PostData.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E95804251291390098944E /* PostData.swift */; };
+		E9E95808251294730098944E /* PostTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9E95806251294730098944E /* PostTableViewCell.swift */; };
+		E9E95809251294730098944E /* PostTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9E95807251294730098944E /* PostTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +45,9 @@
 		E96553D1250B9A3C00255D55 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E9B56637250C8F7200D92E9B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E9D96E802512414D00E6CBEC /* Const.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Const.swift; sourceTree = "<group>"; };
+		E9E95804251291390098944E /* PostData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostData.swift; sourceTree = "<group>"; };
+		E9E95806251294730098944E /* PostTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostTableViewCell.swift; sourceTree = "<group>"; };
+		E9E95807251294730098944E /* PostTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PostTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +114,9 @@
 				E96553CD250B8F3700255D55 /* SettingViewController.swift */,
 				E96553D1250B9A3C00255D55 /* TabBarController.swift */,
 				E9D96E802512414D00E6CBEC /* Const.swift */,
+				E9E95804251291390098944E /* PostData.swift */,
+				E9E95806251294730098944E /* PostTableViewCell.swift */,
+				E9E95807251294730098944E /* PostTableViewCell.xib */,
 			);
 			path = Instagram;
 			sourceTree = "<group>";
@@ -173,6 +182,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E96553C0250B8E2A00255D55 /* LaunchScreen.storyboard in Resources */,
+				E9E95809251294730098944E /* PostTableViewCell.xib in Resources */,
 				E9B56638250C8F7200D92E9B /* GoogleService-Info.plist in Resources */,
 				E96553BD250B8E2A00255D55 /* Assets.xcassets in Resources */,
 				E96553BB250B8E2700255D55 /* Main.storyboard in Resources */,
@@ -228,11 +238,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E9E95808251294730098944E /* PostTableViewCell.swift in Sources */,
 				E96553CC250B8F2000255D55 /* PostViewController.swift in Sources */,
 				E96553D2250B9A3C00255D55 /* TabBarController.swift in Sources */,
 				E96553C8250B8EDD00255D55 /* LoginViewController.swift in Sources */,
 				E96553B8250B8E2700255D55 /* HomeViewController.swift in Sources */,
 				E96553B4250B8E2700255D55 /* AppDelegate.swift in Sources */,
+				E9E95805251291390098944E /* PostData.swift in Sources */,
 				E96553CA250B8F1100255D55 /* ImageSelectViewController.swift in Sources */,
 				E96553CE250B8F3700255D55 /* SettingViewController.swift in Sources */,
 				E96553B6250B8E2700255D55 /* SceneDelegate.swift in Sources */,
