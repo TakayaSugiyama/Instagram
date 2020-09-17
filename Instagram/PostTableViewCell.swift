@@ -1,21 +1,13 @@
-//
-//  PostTableViewCell.swift
-//  Instagram
-//
-//  Created by 杉山貴哉 on 2020/09/17.
-//  Copyright © 2020 TakayaSugiyama. All rights reserved.
-//
-
-import UIKit
 import FirebaseUI
 
 class PostTableViewCell: UITableViewCell {
+
     @IBOutlet weak var postImageView: UIImageView!
     @IBOutlet weak var likeButton: UIButton!
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var dateLabel: UILabel!
     @IBOutlet weak var captionLabel: UILabel!
-    
+
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -26,7 +18,7 @@ class PostTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
-    
+
     // PostDataの内容をセルに表示
     func setPostData(_ postData: PostData) {
         // 画像の表示
@@ -47,7 +39,7 @@ class PostTableViewCell: UITableViewCell {
         }
 
         // いいね数の表示
-        let likeNumber = postData.likes.count
+       let likeNumber = postData.likes.count
         likeLabel.text = "\(likeNumber)"
 
         // いいねボタンの表示
@@ -59,5 +51,4 @@ class PostTableViewCell: UITableViewCell {
             self.likeButton.setImage(buttonImage, for: .normal)
         }
     }
-    
 }
