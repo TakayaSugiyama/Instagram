@@ -11,22 +11,22 @@ import Firebase
 
 class HomeViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     @IBOutlet weak var tableView: UITableView!
-
+    
     // 投稿データを格納する配列
-       var postArray: [PostData] = []
+    var postArray: [PostData] = []
     //Firestroeのリスナー
     var listener: ListenerRegistration!
-
-   override func viewDidLoad() {
-       super.viewDidLoad()
-
-       tableView.delegate = self
-       tableView.dataSource = self
-
-       // カスタムセルを登録する
-       let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
-       tableView.register(nib, forCellReuseIdentifier: "Cell")
-   }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        // カスタムセルを登録する
+        let nib = UINib(nibName: "PostTableViewCell", bundle: nil)
+        tableView.register(nib, forCellReuseIdentifier: "Cell")
+    }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
@@ -53,7 +53,7 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
                 }
             }
         }else{
-          //未ログイン or ログアウト
+            //未ログイン or ログアウト
             if listener != nil {
                 //listenr登録住みなら削除してpostArrayをクリアする
                 listener.remove()
@@ -63,18 +63,48 @@ class HomeViewController: UIViewController, UITableViewDelegate, UITableViewData
             }
         }
     }
-
-   func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       return postArray.count
-   }
-
-   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-       // セルを取得してデータを設定する
-       let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
-       cell.setPostData(postArray[indexPath.row])
-
-       return cell
-   }
-
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return postArray.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // セルを取得してデータを設定する
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PostTableViewCell
+        cell.setPostData(postArray[indexPath.row])
+        
+        // セル内のボタンのアクションをソースコードで設定する
+        cell.likeButton.addTarget(self, action:#selector(handleButton(_:forEvent:)), for: .touchUpInside)
+        return cell
+    }
+    
+    @objc func handleButton(_ sender: UIButton, forEvent event: UIEvent) {
+        print("DEBUG_PRINT: likeボタンがタップされました。")
+        
+        // タップされたセルのインデックスを求める
+        let touch = event.allTouches?.first
+        let point = touch!.location(in: self.tableView)
+        let indexPath = tableView.indexPathForRow(at: point)
+        
+        // 配列からタップされたインデックスのデータを取り出す
+        let postData = postArray[indexPath!.row]
+        
+        // likesを更新する
+        if let myid = Auth.auth().currentUser?.uid {
+            // 更新データを作成する
+            var updateValue: FieldValue
+            if postData.isLiked {
+                // すでにいいねをしている場合は、いいね解除のためmyidを取り除く更新データを作成
+                updateValue = FieldValue.arrayRemove([myid])
+            } else {
+                // 今回新たにいいねを押した場合は、myidを追加する更新データを作成
+                updateValue = FieldValue.arrayUnion([myid])
+            }
+            // likesに更新データを書き込む
+            let postRef = Firestore.firestore().collection(Const.PostPath).document(postData.id)
+            postRef.updateData(["likes": updateValue])
+        }
+    }
+    
 }
 
