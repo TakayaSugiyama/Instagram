@@ -51,12 +51,22 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZEq-LK-Pkh">
+                        <rect key="frame" x="140" y="366" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="4wL-AY-9eC"/>
+                            <constraint firstAttribute="width" constant="40" id="Xhg-J3-wW2"/>
+                        </constraints>
+                        <state key="normal" image="bubble.left" catalog="system"/>
+                    </button>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="6vE-Vu-aho" secondAttribute="trailing" id="1rh-cF-Ofh"/>
                     <constraint firstItem="vUf-kD-oPA" firstAttribute="centerY" secondItem="eUh-jn-kP2" secondAttribute="centerY" id="9Vk-by-Ova"/>
+                    <constraint firstItem="ZEq-LK-Pkh" firstAttribute="leading" secondItem="vUf-kD-oPA" secondAttribute="trailing" constant="20" id="Cni-kG-q0Y"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Uji-fC-7gN" secondAttribute="bottom" constant="10" id="GEs-lG-VJw"/>
                     <constraint firstItem="6vE-Vu-aho" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="GuH-8S-LTj"/>
+                    <constraint firstItem="vUf-kD-oPA" firstAttribute="centerY" secondItem="eUh-jn-kP2" secondAttribute="centerY" id="HBR-pQ-2i6"/>
                     <constraint firstItem="6vE-Vu-aho" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="10" id="Jwt-l3-5bO"/>
                     <constraint firstItem="eUh-jn-kP2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="LCh-6r-ihA"/>
                     <constraint firstAttribute="trailingMargin" secondItem="bNJ-wL-nhr" secondAttribute="trailing" constant="10" id="M3e-W9-Kb2"/>
@@ -64,14 +74,17 @@
                     <constraint firstAttribute="trailingMargin" secondItem="Uji-fC-7gN" secondAttribute="trailing" constant="10" id="UNn-RC-TjF"/>
                     <constraint firstItem="vUf-kD-oPA" firstAttribute="leading" secondItem="eUh-jn-kP2" secondAttribute="trailing" constant="10" id="Y1b-ZW-p6p"/>
                     <constraint firstItem="bNJ-wL-nhr" firstAttribute="centerY" secondItem="eUh-jn-kP2" secondAttribute="centerY" id="aRD-wj-uL4"/>
+                    <constraint firstItem="ZEq-LK-Pkh" firstAttribute="centerY" secondItem="eUh-jn-kP2" secondAttribute="centerY" id="cdq-j9-NPU"/>
                     <constraint firstItem="bNJ-wL-nhr" firstAttribute="leading" secondItem="vUf-kD-oPA" secondAttribute="trailing" constant="10" id="g15-Bk-hZl"/>
                     <constraint firstItem="Uji-fC-7gN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="pIN-DH-gQ5"/>
                     <constraint firstItem="Uji-fC-7gN" firstAttribute="top" secondItem="vUf-kD-oPA" secondAttribute="bottom" constant="10" id="w4u-be-REC"/>
+                    <constraint firstItem="bNJ-wL-nhr" firstAttribute="centerY" secondItem="eUh-jn-kP2" secondAttribute="centerY" id="zdO-PD-6DD"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="captionLabel" destination="Uji-fC-7gN" id="22m-DE-YwS"/>
+                <outlet property="commentButton" destination="ZEq-LK-Pkh" id="WhS-0x-uV8"/>
                 <outlet property="dateLabel" destination="bNJ-wL-nhr" id="KQk-hy-cOv"/>
                 <outlet property="likeButton" destination="eUh-jn-kP2" id="zfu-0u-5SX"/>
                 <outlet property="likeLabel" destination="vUf-kD-oPA" id="tpd-an-6an"/>
@@ -81,6 +94,7 @@
         </tableViewCell>
     </objects>
     <resources>
+        <image name="bubble.left" catalog="system" width="64" height="54"/>
         <image name="like_none" width="40" height="40"/>
     </resources>
 </document>
