@@ -15,31 +15,31 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="original comment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pAu-Jy-mYd">
-                                <rect key="frame" x="140.5" y="64" width="133" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コメントを投稿する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94d-F8-Nv2">
+                                <rect key="frame" x="0.0" y="74" width="414" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメント....." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JsV-3E-9DX">
-                                <rect key="frame" x="0.0" y="828" width="414" height="34"/>
+                                <rect key="frame" x="0.0" y="125" width="414" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="pAu-Jy-mYd" firstAttribute="centerX" secondItem="geE-mj-Nr5" secondAttribute="centerX" id="5hM-VX-JfA"/>
-                            <constraint firstItem="pAu-Jy-mYd" firstAttribute="top" secondItem="00z-V9-8qS" secondAttribute="top" constant="20" id="IP1-oD-ciU"/>
-                            <constraint firstItem="00z-V9-8qS" firstAttribute="trailing" secondItem="JsV-3E-9DX" secondAttribute="trailing" id="dpF-gH-Aab"/>
-                            <constraint firstItem="JsV-3E-9DX" firstAttribute="bottom" secondItem="00z-V9-8qS" secondAttribute="bottom" id="p4F-h3-Wno"/>
-                            <constraint firstItem="JsV-3E-9DX" firstAttribute="leading" secondItem="00z-V9-8qS" secondAttribute="leading" id="qGJ-2b-UkJ"/>
+                            <constraint firstItem="JsV-3E-9DX" firstAttribute="trailing" secondItem="00z-V9-8qS" secondAttribute="trailing" id="6dX-eW-Pem"/>
+                            <constraint firstItem="94d-F8-Nv2" firstAttribute="leading" secondItem="00z-V9-8qS" secondAttribute="leading" id="DLH-NE-BRH"/>
+                            <constraint firstItem="JsV-3E-9DX" firstAttribute="leading" secondItem="00z-V9-8qS" secondAttribute="leading" id="Rz0-MF-Iqu"/>
+                            <constraint firstItem="00z-V9-8qS" firstAttribute="trailing" secondItem="94d-F8-Nv2" secondAttribute="trailing" id="SMq-p9-6Bs"/>
+                            <constraint firstItem="JsV-3E-9DX" firstAttribute="top" secondItem="94d-F8-Nv2" secondAttribute="bottom" constant="30" id="TaY-uz-Nyp"/>
+                            <constraint firstItem="94d-F8-Nv2" firstAttribute="top" secondItem="00z-V9-8qS" secondAttribute="top" constant="30" id="WR0-1F-F6H"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="00z-V9-8qS"/>
                     </view>
                     <connections>
                         <outlet property="commentTextField" destination="JsV-3E-9DX" id="eLF-aV-4pG"/>
-                        <outlet property="originalComment" destination="pAu-Jy-mYd" id="ZNo-k1-R2J"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SjF-HO-jSl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
