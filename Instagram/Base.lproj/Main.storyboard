@@ -7,6 +7,45 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Commnt View Controller-->
+        <scene sceneID="PUo-2u-aHi">
+            <objects>
+                <viewController storyboardIdentifier="Comment" id="Dtp-gO-Js7" customClass="CommntViewController" customModule="Instagram" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="geE-mj-Nr5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="コメントを投稿する" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="94d-F8-Nv2">
+                                <rect key="frame" x="0.0" y="74" width="414" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="コメント....." textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JsV-3E-9DX">
+                                <rect key="frame" x="0.0" y="125" width="414" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
+                            </textField>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JsV-3E-9DX" firstAttribute="trailing" secondItem="00z-V9-8qS" secondAttribute="trailing" id="6dX-eW-Pem"/>
+                            <constraint firstItem="94d-F8-Nv2" firstAttribute="leading" secondItem="00z-V9-8qS" secondAttribute="leading" id="DLH-NE-BRH"/>
+                            <constraint firstItem="JsV-3E-9DX" firstAttribute="leading" secondItem="00z-V9-8qS" secondAttribute="leading" id="Rz0-MF-Iqu"/>
+                            <constraint firstItem="00z-V9-8qS" firstAttribute="trailing" secondItem="94d-F8-Nv2" secondAttribute="trailing" id="SMq-p9-6Bs"/>
+                            <constraint firstItem="JsV-3E-9DX" firstAttribute="top" secondItem="94d-F8-Nv2" secondAttribute="bottom" constant="30" id="TaY-uz-Nyp"/>
+                            <constraint firstItem="94d-F8-Nv2" firstAttribute="top" secondItem="00z-V9-8qS" secondAttribute="top" constant="30" id="WR0-1F-F6H"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="00z-V9-8qS"/>
+                    </view>
+                    <connections>
+                        <outlet property="commentTextField" destination="JsV-3E-9DX" id="eLF-aV-4pG"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SjF-HO-jSl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-771.01449275362324" y="182.8125"/>
+        </scene>
         <!--ホーム-->
         <scene sceneID="tne-QT-ifu">
             <objects>
